@@ -52,3 +52,12 @@ div.section {
 .exercise_3 button.yellow_button {
     background-color: #ffff00;
 }
+
+
+/* exercise 5 */
+.exercise_5 .container p {
+    background-color: #ffff00;
+    color: #ff0000;
+    font-size: 20px;
+    text-align: center;
+}
