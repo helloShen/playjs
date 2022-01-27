@@ -1,0 +1,54 @@
+.title {
+    text-align: center;
+}
+
+div.section {
+    margin-block-start: 2em;
+}
+
+/* exercise 1 */
+.exercise_1 div {
+    background-color: red;
+    color: white;
+    font-size: 32px;
+    font: bolder;
+    text-align: center;
+}
+
+
+/* exercise 2 */
+.exercise_2 p.odd {
+    background-color: #ffa2a2;
+    font-family: Verdana, "DejaVu Sans", sans-serif; ;
+}
+
+.exercise_2 p#second {
+    color: #0000ff;
+    font-size: 36px;
+}
+
+.exercise_2 p.third {
+    font-size: 24px;
+}
+
+.exercise_2 p.fourth {
+    background-color: chartreuse;
+    font-size: 24px;
+    font:bolder
+}
+
+
+/* exercise 3 */
+.exercise_3 button {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.exercise_3 button.black_button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.exercise_3 button.yellow_button {
+    background-color: #ffff00;
+}
