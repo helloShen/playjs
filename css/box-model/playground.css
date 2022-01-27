@@ -1,0 +1,21 @@
+div, 
+p {
+    border: 3px solid red;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.width-fixed {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.width-free {
+    height: auto;
+    display: inline-block;
+    box-sizing: border-box;
+}
