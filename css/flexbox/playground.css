@@ -1,0 +1,21 @@
+.container {
+    border: 1px dashed white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+.container .box {
+    background-color: plum;
+    font-size: 24px;
+    color: purple;
+    border: 2px solid purple;
+    width: 500px;
+    /* height: 80px; */
+    flex: 1 1 auto;
+    /* flex: 0 1 auto; */
+}
+
+.container .box.two {
+}
