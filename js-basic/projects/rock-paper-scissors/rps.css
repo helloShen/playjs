@@ -1,0 +1,22 @@
+.selection,
+.round {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.selection.listening {
+    background-color: yellow;
+}
+
+.round {
+    background-color: red;
+}
+
+.screen {
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: white;
+}

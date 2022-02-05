@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./game.js"></script>
+    <link rel="stylesheet" href="./rps.css"/>
+    <script src="./rps.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
+    <div data-name="Rock" class="selection">Rock</div>
+    <div data-name="Paper" class="selection">Paper</div>
+    <div data-name="Scissors" class="selection">Scissors</div>
+    <div class="round">Play a round</div>
+    <div class="screen"></div>
+    <div>Computer score: <span data-score="0" class="computerScore">0</span></div>
+    <div>Your score: <span data-score="0" class="playerScore">0</span></div>
 </body>
 </html>
