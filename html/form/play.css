@@ -1,0 +1,98 @@
+.container {
+    width: 50vw;
+    height:20vh;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.relative::after {
+    width: 10rem;
+    height: 2rem;
+    background-color: #000;
+    color: #fff;
+    content: 'required';
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+}
+
+.fruit > input[type="radio"]:indeterminate {
+    appearance: none;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid red;
+    border-radius: 1.5em;
+    animation: red-circle 0.5s linear 0s infinite alternate forwards;
+}
+
+@keyframes red-circle {
+    0% {
+        border: 2px solid red;
+    }
+    100% {
+        border: 6px solid red;
+    }
+}
+
+.fruit > input[type="radio"]::before {
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    display: block;
+    content: " ";
+    background-color: red;
+    transform: translate(2px, 2px) scale(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in;
+}
+
+.fruit > input[type="radio"]:checked::before {
+    transform: translate(2px, 2px) scale(1);
+}
+
+.login > form {
+    width: 50vw;
+    height: 20vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login input[type='text'],
+.login input[type='password'] {
+    border: 1px solid black;
+}
+
+.login input[type='text']:required,
+.login input[type='password']:required {
+    border: 2px solid black;
+}
+
+.login input[type='text']:invalid,
+.login input[type='password']:invalid {
+    border: 2px solid red;
+}
+
+.login input[type='text'] + span::after,
+.login input[type='password'] + span::after {
+    content: '×';
+    font-weight: 900;
+    color: #ff000000;
+    transition: color 0.5s ease-in-out;
+}
+
+.login input[type='text']:invalid + span::after,
+.login input[type='password']:invalid + span::after {
+    color: red;
+}
+
+
+
+
