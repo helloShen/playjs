@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Pacifico';
+    src: url('./Pacifico-Regular.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+.hello {
+    color: red;
+    background: url('./my-image.jpeg');
+    font-family: 'Pacifico', sans-serif;
+}

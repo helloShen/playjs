@@ -95,3 +95,67 @@ const Car = function(color) {
 
 const myCar = new Car('red');
 
+function C() {}
+console.log(C);
+C.prototype = { prototype_prop: "new proto"};
+console.log(C);
+const c = new C();
+console.log(c);
+
+const counter = () => {
+    let count = 0;
+    return () => {
+        return ++count;
+    };
+}
+
+const myCounter = counter();
+for (let i = 0; i < 10; i++) console.log(myCounter());
+
+/* closure makes the private properties invisible */
+const Person = (name) => {
+    const sayHello = () => { console.log(`Hello, my name is ${name}!`) };
+    return { sayHello };
+};
+
+const peter = Person('Peter');
+peter.sayHello();
+
+/* inheritance */
+const Player = (name, game) => {
+    const { sayHello } = Person(name);
+    const play = () => { console.log(`I love to play ${game}!`)};
+    return { sayHello, play };
+};
+
+/* the module pattern */
+const Nerd = (() => {
+    const doSomethingNerdy = () => { console.log('Nerdy stuff.') };
+    return { doSomethingNerdy };
+})();
+
+
+const jay = Player('Jay', 'basketball');
+
+jay.sayHello();
+jay.play();
+const nerdJay = Object.assign(jay, Nerd);
+nerdJay.sayHello();
+nerdJay.play();
+nerdJay.doSomethingNerdy();
+
+
+const foo = (() => {
+    function bar() {
+        this.a = 'hello';
+    }
+    function getA() {
+        return this.a;
+    }
+    return { bar, getA };
+})();
+
+foo.bar();
+console.log(foo.getA());
+
+
