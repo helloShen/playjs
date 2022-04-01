@@ -8,7 +8,7 @@ flex/
 
 # node_modules installed by npm
 node_modules/
-.eslintrc.json
+package-lock.json
 
 # others
 .DS_Store
