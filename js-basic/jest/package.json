@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "go": "node ./src/index.js",
+    "play": "node ./src/js/play.js",
     "test": "jest",
     "build": "webpack"
   },
