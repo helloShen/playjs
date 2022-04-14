@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'development',
-  entry: './src/js/welcome.js',
+  entry: './src/js/TemperatureCalculator.js',
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
