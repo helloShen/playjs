@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'development',
-  entry: './src/js/compositionBorder.js',
+  entry: './src/js/filterableProductTable.js',
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
