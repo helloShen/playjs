@@ -12,7 +12,7 @@
 }
 
 .App-header {
-  background-color: var(--react-gray);
+  /* background-color: var(--react-gray); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
