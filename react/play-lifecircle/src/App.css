@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+hr {
+  margin: 1rem 0;
+  width: 100%;
+  size: 2px;
+  color: #000;
+}
