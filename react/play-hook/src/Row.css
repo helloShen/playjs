@@ -1,0 +1,31 @@
+.row {
+  background-color: transparent;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: .75rem;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, .6);
+}
+
+/**
+ * THEME
+ */
+
+.label.theme-orange {
+  color: #00000088;
+}
+
+.label.theme-blue {
+  color: #282c3488;
+}
+
+.label.theme-dark {
+  color: #ffffffdd;
+}
+
+
