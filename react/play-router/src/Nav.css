@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --react-gray: #282c34;
+  --react-blue: #61dafb;
+  --react-white: white;
+}
+
+.nav {
+  padding: .5rem 0;
+  background-color: var(--react-gray);
+  /* display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 1rem; */
+}
+
+.logo {
+  margin-left: 2rem;
+  margin-right: 4rem;
+  font-size: 1.5rem;
+  color: var(--react-white);
+}
+
+.btns {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: .5rem 1rem;
+  margin: 0 1px;
+  background-color: var(--react-blue);
+  color: white;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: gray;
+}

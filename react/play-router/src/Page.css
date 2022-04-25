@@ -1,0 +1,14 @@
+.page {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+}
+
+.title {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.item {
+  margin: .5rem 0;
+}

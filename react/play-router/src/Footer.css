@@ -1,0 +1,14 @@
+:root {
+  --react-gray: #282c34;
+  --react-blue: #61dafb;
+  --react-white: white;
+}
+
+.footer {
+  width: 100%;
+  padding: .5rem 0;
+  color: var(--react-white);
+  background-color: var(--react-gray);
+  text-align: center;
+  font-size: .75rem;
+}
