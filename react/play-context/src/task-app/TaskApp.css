@@ -1,0 +1,10 @@
+.task-checkbox,
+.task-input,
+.task-text {
+  display: inline-block;
+}
+
+.task-input,
+.task-text {
+  margin-right: 1rem;
+}
