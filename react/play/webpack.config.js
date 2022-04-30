@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'development',
-  entry: './src/js/filterableProductTable.js',
+  entry: './src/js/play.js',
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
