@@ -1,0 +1,43 @@
+.box-container {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+  margin: 2rem;
+  background-color: lightgray;
+}
+
+.red-box,
+.blue-box,
+.purple-box,
+.green-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.red-box {
+  background-color: red;
+  transform: rotate(45deg) translate(200%);
+}
+
+.blue-box {
+  background-color: blue;
+  transform: translate(200%) rotate(45deg);
+}
+
+.purple-box {
+  background-color: purple;
+  transform: rotateZ(60deg);
+}
+
+.green-box {
+  background-color: green; 
+}
+
+.green-box.first {
+  transform: translateY(150px);
+}
+
+.green-box.second {
+  transform: translateY(300px) perspective(100px) translateZ(30px);
+}

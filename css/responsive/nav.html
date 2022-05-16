@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./nav.css">
+  <title>Navigation</title>
+</head>
+<body>
+  <div class="sidebar">
+    <i class="sidebar__icon material-icons">menu</i>
+  </div>
+  <div class="header">
+    <div class="hero">
+      <h1 class="title">Shen</h1>
+      <p class="subtitle">web developer</p>
+    </div>
+    <nav class="nav">
+      <ul class="btns">
+        <a href="#">
+          <li class="btn">
+            Home
+            <span class="btn__overlap"></span>
+          </li>
+        </a>
+        <a href="#">
+          <li class="btn">
+            About
+            <span class="btn__overlap"></span>
+          </li>
+        </a>
+        <a href="#">
+          <li class="btn">
+            Projects
+            <span class="btn__overlap"></span>
+          </li>
+        </a>
+      </ul>
+    </nav>
+  </div>
+</body>
+<script>
+  const body = document.querySelector('body');
+  const header = document.querySelector('.header');
+  const nav = document.querySelector('.nav');
+  const sidebar = document.querySelector('.sidebar');
+  const menu = document.querySelector('.sidebar__icon');
+
+  const enableNavBtns = () => {
+    const btns = document.querySelectorAll('.btn');
+    btns.forEach((btn) => btn.addEventListener('click', () => {
+      btns.forEach((btn) => btn.classList.remove('selected'));
+      btn.classList.add('selected');
+    }))
+  };
+
+  const navPhoneLayoutHandler = () => {
+    if (window.innerWidth <= 416 && !body.classList.contains('phone')) {
+      // remove from horizontal header container
+      nav.remove();
+      // insert into vertical sidebar
+      sidebar.classList.add('show');
+      sidebar.classList.remove('unfold');
+      sidebar.appendChild(nav);
+      // modify nav's layout
+      body.classList.add('phone');
+    } else if (window.innerWidth > 416 && body.classList.contains('phone')) {
+      nav.remove();
+      sidebar.classList.remove('show');
+      sidebar.classList.remove('unfold');
+      header.appendChild(nav);
+      body.classList.remove('phone');
+    }
+  }
+  
+  const enableNavResizeHandler = () => {
+    window.onresize = navPhoneLayoutHandler;
+  }
+
+  const enableSidebarMenu = () => {
+    menu.addEventListener('click', () => sidebar.classList.toggle('unfold'));
+  }
+
+  enableNavBtns();
+  enableNavResizeHandler();
+  navPhoneLayoutHandler();
+  enableSidebarMenu();
+</script>
+</html>

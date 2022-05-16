@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&family=Roboto+Slab:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.phone {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.sidebar {
+  /* width: 8em; */
+  min-height: 100vh;
+  margin-top: 2em;
+  padding: 0 1em;
+  display: none;
+}
+
+.sidebar.show {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  justify-items: center;
+}
+
+.sidebar__icon {
+  margin: .25em 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+.sidebar .nav > .btns {
+  margin: .5em auto;
+  display: none;  
+  grid-template-rows: repeat(3, 2.5em);
+  align-items: center;
+  align-content: start;
+  justify-items: center;
+}
+
+.sidebar.unfold .nav > .btns {
+  display: grid;
+}
+
+.header {
+  margin-top: 2em;
+}
+
+.header .hero {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  width: 100%;
+  margin-bottom: .5em;
+  font-size: .75rem;
+  font-family: 'Roboto', sans-serif;
+  color: #6b7280;
+  text-align: center;
+}
+
+.header .nav {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.nav .btns {
+  height: 2em;
+}
+
+.nav .btn {
+  display: inline-block;  
+  padding: 0 .75em;
+  line-height: 2em;
+  position: relative;
+  font-size: .75rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav .btn:focus,
+.nav .btn.selected {
+  background-color: #f3f4f6;
+  border-bottom: 4px solid black;
+}
+
+.nav .btn__overlap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  z-index: 1;
+}
+
+.nav .btn__overlap:hover {
+  opacity: .12;
+  border-bottom: 4px solid black;
+}
+
+.nav .btn:active .btn__overlap:hover,
+.nav .btn.selected .btn__overlap:hover {
+  opacity: 0;
+}
+
+@media (min-width: 675px) {
+  .header {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .header .hero {
+    margin-left: 2em;
+  }
+
+  .header .nav {
+    margin-right: 2em;
+  }
+}
