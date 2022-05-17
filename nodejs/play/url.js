@@ -1,0 +1,13 @@
+const myURL = new URL('/foo?123#xyz', 'https://shen:yoyo@ciaoshen.com:5000');
+console.log(`url: ${myURL}`);
+console.log(`url href: ${myURL.href}`);
+console.log(`url hostname = ${myURL.hostname}`);
+console.log(`url host = ${myURL.host}`);
+console.log(`url port = ${myURL.port}`);
+console.log(`url protocol = ${myURL.protocol}`);
+console.log(`url pathname: ${myURL.pathname}`);
+console.log(`url origin: ${myURL.origin}`);
+console.log(`url search: ${myURL.search}`);
+console.log(`url hash: ${myURL.hash}`);
+console.log(`url password: ${myURL.password}`);
+console.log(`url username: ${myURL.username}`);
