@@ -17,7 +17,7 @@ import Genre from './models/genre.js';
 import BookInstance from './models/bookinstance.js';
 
 import mongoose from 'mongoose';
-var mongoDB = userArgs[0];
+var mongoDB = 'mongodb+srv://shen:mongomongoose@library.gwvuc.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -83,7 +83,7 @@ function bookCreate(title, summary, isbn, author, genre, cb) {
 
 
 function bookInstanceCreate(book, imprint, due_back, status, cb) {
-  bookinstancedetail = { 
+  const bookinstancedetail = { 
     book: book,
     imprint: imprint
   }    

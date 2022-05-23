@@ -1,7 +1,14 @@
 import Author from '../models/author.js';
 
-export function author_list(req, res) {
-  res.send('Author list');
+export function author_list(req, res, next) {
+  Author.find()
+    .exec(function(err, list_authors) {
+      if (err) return next(err);
+      res.render('author_list', {
+        title: 'Author List',
+        author_list: list_authors
+      });
+    });
 }
 
 export function author_detail(req, res) {

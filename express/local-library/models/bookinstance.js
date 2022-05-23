@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import {DateTime} from 'luxon';
 
 const Schema = mongoose.Schema;
 
@@ -22,6 +23,10 @@ const BookInstanceSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+});
+
+BookInstanceSchema.virtual('due_back_formatted').get(function() {
+  return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);
 });
 
 BookInstanceSchema.virtual('url').get(function() {

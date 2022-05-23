@@ -16,12 +16,12 @@ const BookSchema = new Schema({
     type: String,
     required: true,
   },
-  ISBN: {
+  isbn: {
     type: String,
     required: true,
   },
   genre: {
-    type: Schema.Types.ObjectId,
+    type: [Schema.Types.ObjectId],
     ref: 'Genre',
   },
 });
