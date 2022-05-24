@@ -4,6 +4,7 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import compression from 'compression';
 /* routes */
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
@@ -15,12 +16,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
+
+// Use Helmet to protect against well known vulnerabilities
+app.use(helmet());
+
 //Set up mongoose connection
 import mongoose from 'mongoose';
 const mongoDB = 'mongodb+srv://shen:mongomongoose@library.gwvuc.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+// Compress all routes
+app.use(compression());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
